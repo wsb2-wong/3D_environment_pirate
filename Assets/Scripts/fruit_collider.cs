@@ -26,7 +26,7 @@ public class fruit_collider : MonoBehaviour
         if (other.CompareTag("Player")) 
         {
             // Play the assigned timeline when triggered
-            fruit.Play(); // corrected cutscene to fruit
+            fruit.Play(); 
         }
     }
 }

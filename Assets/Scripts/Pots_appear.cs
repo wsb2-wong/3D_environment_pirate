@@ -10,31 +10,31 @@ public class StumpTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player") && !hasPlayerTriggered)
         {
-            hasPlayerTriggered = true; // Player has triggered the stump for the first time
-            ShowPotsRound(); // Show the Pots_round GameObject
-            PlaySpaceshipSound(); // Play the spaceship sound
+            hasPlayerTriggered = true; 
+            ShowPotsRound(); 
+            PlaySpaceshipSound(); 
         }
     }
 
     private void HidePotsRound()
     {
-        potsRound.SetActive(false); // Hide the Pots_round GameObject
+        potsRound.SetActive(false); 
     }
 
     private void ShowPotsRound()
     {
-        potsRound.SetActive(true); // Show the Pots_round GameObject
+        potsRound.SetActive(true); 
     }
 
     private void PlaySpaceshipSound()
     {
-        spaceshipSound.Play(); // Play the spaceship sound
+        spaceshipSound.Play(); 
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        HidePotsRound(); // Initially hide the Pots_round GameObject
-        spaceshipSound.Stop(); // Ensure the sound is stopped initially
+        HidePotsRound(); 
+        spaceshipSound.Stop(); 
     }
 }

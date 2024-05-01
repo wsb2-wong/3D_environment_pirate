@@ -25,7 +25,8 @@ public class chest_behaviour : MonoBehaviour
         {
             animator.SetTrigger("open");
             ShowUI(); 
-            StartCoroutine(HideUIDelay(8f)); // Start coroutine to hide UI after 15 seconds
+            StartCoroutine(HideUIDelay(8f)); // Start coroutine to hide UI after 8 seconds
+            StartCoroutine(TriggerDanceDelay(8f)); // Start coroutine to trigger dance animation after 8 seconds
         }
     }
 
@@ -33,6 +34,12 @@ public class chest_behaviour : MonoBehaviour
     {
         yield return new WaitForSeconds(delay); // Wait for specified delay
         HideUI(); // Hide the UI after delay
+    }
+
+    private IEnumerator TriggerDanceDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay); // Wait for specified delay
+        animator.SetTrigger("dance"); // Trigger the dance animation after delay
     }
 
     private void HideUI()
